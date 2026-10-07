@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f6f2">
+    <title>Daymark — Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="page-header">
+        <a class="brand" href="#" aria-label="Daymark home">
+          <span class="brand-mark" aria-hidden="true">d</span>
+          <span>daymark</span>
+        </a>
+        <span class="today-label" id="today-label"></span>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">A little progress, every day</p>
+        <h1 id="page-title">Make today <span>count.</span></h1>
+        <p class="intro-copy">Small steps become the things that make you.</p>
+      </section>
+
+      <section class="habit-section" aria-labelledby="habits-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your daily practice</p>
+            <h2 id="habits-heading">Your habits <span id="habit-count">0</span></h2>
+          </div>
+        </div>
+
+        <form class="add-form" id="add-form">
+          <label class="visually-hidden" for="habit-name">Name a habit to build</label>
+          <input
+            id="habit-name"
+            name="habit"
+            type="text"
+            maxlength="60"
+            placeholder="What would you like to do?"
+            autocomplete="off"
+            required
+          >
+          <button class="add-button" type="submit">
+            <span aria-hidden="true">+</span>
+            Add habit
+          </button>
+        </form>
+
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        <div class="habit-list" id="habit-list" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state">
+          <span class="empty-icon" aria-hidden="true">✳</span>
+          <h3>A fresh start</h3>
+          <p>Add your first habit above. You’ve got this.</p>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <span>Show up for yourself.</span>
+        <span class="footer-spark" aria-hidden="true">✳</span>
+      </footer>
+    </main>
+  </body>
+</html>
